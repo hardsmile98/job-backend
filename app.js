@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const config = require('config')
 const auth = require('./routes/auth')
 const job = require('./routes/job')
@@ -7,6 +8,7 @@ const user = require('./routes/user')
 
 const app = express()
 
+app.use(cors())
 app.use(express.json({ extended: true }))
 
 app.get('/', (req, res) => {
