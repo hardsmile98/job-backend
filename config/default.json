@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "mongoUrl": "mongodb+srv://hardsmile98:kotelev01041998@cluster0.n699j.mongodb.net/jobs?retryWrites=true&w=majority",
+  "jwtSecret": "x3E6g4$0Sot6&1hZ"
+}
