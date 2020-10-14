@@ -17,7 +17,7 @@ app.use('/api/auth', auth)
 app.use('/api/job', job)
 app.use('/api/user', user)
 
-const PORT = config.get('port') || '5000'
+const PORT = process.env.PORT || '5000'
 async function start() {
   try {
     await mongoose.connect(config.get('mongoUrl'), {
