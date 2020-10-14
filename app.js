@@ -9,6 +9,10 @@ const app = express()
 
 app.use(express.json({ extended: true }))
 
+app.get('/', (req, res) => {
+  res.send('Hello from Express!')
+})
+
 app.use('/api/auth', auth)
 app.use('/api/job', job)
 app.use('/api/user', user)
