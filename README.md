@@ -6,7 +6,7 @@ This is the backend repo built with Express and MongoDB. Frontend repo [click he
 
 ## Running Locally
 
-Then run <code>npm i && npm run start</code> to see the instaclone in action
+Then run <code>npm run server or npm run start</code>
 
 ## UI
 
