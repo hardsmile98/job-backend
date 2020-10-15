@@ -20,6 +20,10 @@ router.get('/:id', async (req, res) => {
     const job = await Job.findById(req.params.id)
     const recommends = await Job.find({ _id: { $ne: req.params.id } }).limit(3)
 
+    if (!job) {
+      return res.status(404).json({ message: 'Такой вакансии нет' })
+    }
+
     res.json({ detail: job, recommends: recommends })
   } catch (e) {
     res.status(500).json({ message: 'Что-то пошло не так' })
